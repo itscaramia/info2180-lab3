@@ -23,6 +23,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
         // Exercise 2: Place X or O when clicked
         square.addEventListener("click", function () {
+            if (square.textContent !== "") {
+    return;}
             square.textContent = currentPlayer;
             square.classList.add(currentPlayer);
 
