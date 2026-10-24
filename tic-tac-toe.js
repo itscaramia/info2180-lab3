@@ -63,4 +63,20 @@ window.addEventListener("DOMContentLoaded", function () {
             square.classList.remove("hover");
         });
     });
+    const newGameButton = document.querySelector(".btn");
+
+newGameButton.addEventListener("click", function () {
+    // Clear all squares
+    squares.forEach(function (square) {
+        square.textContent = "";
+        square.classList.remove("X", "O");
+    });
+
+    // Reset the current player
+    currentPlayer = "X";
+
+    // Reset the status message
+    status.textContent = "Move your mouse over a square and click to play!";
+    status.classList.remove("you-won");
+});
 });
