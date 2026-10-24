@@ -6,3 +6,26 @@ window.addEventListener("DOMContentLoaded", function () {
         square.classList.add("square");
     });
 });
+
+window.addEventListener("DOMContentLoaded", function () {
+    const squares = document.querySelectorAll("#board div");
+
+    let currentPlayer = "X";
+
+    squares.forEach(function (square) {
+        // Exercise 1: Style each square
+        square.classList.add("square");
+
+        // Exercise 2: Add X or O when clicked
+        square.addEventListener("click", function () {
+            square.textContent = currentPlayer;
+            square.classList.add(currentPlayer);
+
+            if (currentPlayer === "X") {
+                currentPlayer = "O";
+            } else {
+                currentPlayer = "X";
+            }
+        });
+    });
+});
